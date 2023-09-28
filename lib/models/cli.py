@@ -38,6 +38,8 @@ def choice_menu():
     print("(10) Ban Student from the archives")
     print("")
     print("(11) Update a book entry")
+    print("")
+    print("(12) Exit the library")
 
     print("--------------------------------------")
     return input("What would you like to do?")
@@ -231,8 +233,9 @@ def update_book():
 def main():
     # os.system('clear')
     welcome_menu()
+    
     while True:
-        
+
         choice = choice_menu()
         if choice == '1':
             show_books()
@@ -256,6 +259,9 @@ def main():
             ban_student()
         elif choice == '11':
             update_book()
+        elif choice == '12':
+            print("Have a good rest")
+            break
         else:
             print("Invalid option. Please choose again.")
 
